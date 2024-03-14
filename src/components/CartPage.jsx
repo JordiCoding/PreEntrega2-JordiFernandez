@@ -2,6 +2,7 @@
 import React from 'react';
 
 function CartPage({ cartItems }) {
+
   // Función para agrupar los productos por tipo y calcular la cantidad total y el precio total de cada tipo
   const groupedItems = cartItems.reduce((acc, item) => {
     const existingItem = acc.find(i => i.title === item.title);

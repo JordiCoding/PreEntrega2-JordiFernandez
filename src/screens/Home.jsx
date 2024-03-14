@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { createContext, useContext, useState } from 'react';
+import '../App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import CardDetail from './components/CardDetail'; 
-import CartPage from './components/CartPage'; // Importa el componente de la página del carrito
-import cardsData from './data'; // Importa info de las cards
+import NavBar from '../components/NavBar';
+import CardDetail from '../components/CardDetail'; 
+import CartPage from '../components/CartPage'; // Importa el componente de la página del carrito
+import CartSummaryPage from '../components/CartSummaryPage'
+import cardsData from '../data'; // Importa info de las cards
+import { UserContext } from '../store/UserContext';
 
-function App() {
-  const [cartItems, setCartItems] = useState([]);
+function Home() {
+  const {cartItems, setCartItems } = useContext(UserContext);
 
   const addToCart = (product) => {
-    setCartItems(prevItems => [...prevItems, product]);
+    setCartItems(prevProducts => [...prevProducts, product]);
   };
 
   return (
-    <Router>
       <>
-        <div className="header">La Fruteria</div>
-        <NavBar cartCount={cartItems.length} /> {/* Pasar cartItems como prop a NavBar */}
+     
         <div className="grid-container">
           {cardsData.map((card) => (
             <CardDetail 
@@ -32,8 +32,7 @@ function App() {
         </div>
         <CartPage cartItems={cartItems} /> {/* Renderiza CartPage debajo de grid-container */}
       </>
-    </Router>
   );
 }
 
-export default App;
+export default Home;
