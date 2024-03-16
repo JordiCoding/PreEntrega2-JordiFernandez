@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import '../App.css';
+import '../components/styles.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import CardDetail from '../components/CardDetail'; 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
-import './NavBar.css';
+import './styles.css';
 import CartWidget from './CartWidget';
 import { UserContext } from '../store/UserContext';
 
@@ -9,7 +9,7 @@ const NavBar = ({ cartCount }) => {
 
 
   return (
-    <header>
+    <header className="NavHeader">
       <nav>
        <ul>
          <li>

@@ -12,7 +12,7 @@ function App() {
   return (
     <UserProvider>
         <div className="App">
-          <div className="header">La Fruteria</div>
+          <div className="header">La Fruteriaaaa</div>
           <NavBar  /> {/* Pass cartItems as a prop to NavBar */}
           <div className="content">
             <Routes>
