@@ -8,7 +8,7 @@ export const UserProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{ cartItems, setCartItems }}>
+    <UserContext.Provider value={{ cartItems, setCartItems}}>
       {children}
     </UserContext.Provider>
   );

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+import { Link } from 'react-router-dom'; 
 import './styles.css';
 import CartWidget from './CartWidget';
 import { UserContext } from '../store/UserContext';
