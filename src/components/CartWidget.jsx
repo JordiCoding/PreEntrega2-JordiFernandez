@@ -1,6 +1,5 @@
 // CartWidget.jsx
 import React from 'react';
-import './NavBar.css'; 
 import cartIcon from '../assets/carts.png'; 
 
 const CartWidget = ({ cartCount }) => {
