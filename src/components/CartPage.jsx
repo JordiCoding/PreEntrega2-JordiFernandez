@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../store/UserContext';
-import './styles.css'; // Suponiendo que tienes un archivo de estilos CSS para este componente
+import './styles.css';
 
 function CartPage() {
   const { cartItems, removeFromCart } = useContext(UserContext);

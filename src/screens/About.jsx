@@ -11,7 +11,6 @@ function About() {
 
   const { cartItems } = useContext(UserContext);
 
-  // Filtrar datos por categoría 'fruta'
   const filteredCards = cardsData.filter(card => card.category === 'verdura');
   console.log(filteredCards);
 
