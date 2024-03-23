@@ -3,17 +3,20 @@ import '../App.css';
 import '../components/styles.css';
 import CardDetail from '../components/CardDetail'; 
 import CartPage from '../components/CartPage'; // Importa el componente de la página del carrito
-import cardsData from '../data'; // Importa info de las cards
 import { UserContext } from '../store/UserContext';
-
+import { cardsData } from '../data'; // Importa info de las cards
 
 function Home() {
   const { cartItems } = useContext(UserContext);
 
+  // Filtrar datos por categoría 'fruta'
+  const filteredCards = cardsData.filter(card => card.category === 'fruta');
+  console.log(filteredCards);
+
   return (
     <>
       <div className="grid-container">
-        {cardsData.map((card) => (
+        {filteredCards.map((card) => (
           <CardDetail
             key={card.id}
             id={card.id}
@@ -21,6 +24,7 @@ function Home() {
             description={card.description}
             price={card.price}
             image={card.image}
+            category={card.category} // Pasar la categoría al componente CardDetail
           />
         ))}
       </div>

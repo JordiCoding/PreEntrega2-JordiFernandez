@@ -13,10 +13,10 @@ const NavBar = ({ cartCount }) => {
       <nav>
        <ul>
          <li>
-           <Link to="/">Home</Link>
+           <Link to="/">Frutas</Link>
          </li>
          <li>
-           <Link to="/about">About</Link>
+           <Link to="/about">Verduras</Link>
          </li>
          <li>
            <Link to="/checkout">Checkout</Link>
