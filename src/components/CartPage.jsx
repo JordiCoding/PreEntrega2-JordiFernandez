@@ -1,24 +1,15 @@
-// CartPage.jsx
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../store/UserContext';
+import './styles.css'; // Suponiendo que tienes un archivo de estilos CSS para este componente
 
-
-function CartPage({ cartItems}) {
-  // Función para agrupar los productos por tipo y calcular la cantidad total y el precio total de cada tipo
-  const groupedItems = cartItems.reduce((acc, item) => {
-    const existingItem = acc.find(i => i.title === item.title);
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      acc.push({ ...item, quantity: 1 });
-    }
-    return acc;
-  }, []);
+function CartPage() {
+  const { cartItems, removeFromCart } = useContext(UserContext);
 
   // Calcular la cantidad total de productos en el carrito
-  const totalQuantity = cartItems.reduce((total, item) => total + 1, 0);
+  const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   // Calcular el precio total del carrito
-  const totalPrice = groupedItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const totalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   return (
     <div className="card">
@@ -27,12 +18,13 @@ function CartPage({ cartItems}) {
         <p className="total-quantity">Cantidad total de productos en el carrito: {totalQuantity}</p>
         <p className="total-quantity">Precio total: <b>${totalPrice.toFixed(2)}</b></p>
         <ul className="cart-items">
-          {groupedItems.map((item, index) => (
+          {cartItems.map((item, index) => (
             <li key={index} className="cart-item">
               <span>{item.title}</span>
               <span className="price">${item.price.toFixed(2)}</span>
               <span className="quantity">x {item.quantity}</span>
               <span className="subtotal">${(item.price * item.quantity).toFixed(2)}</span>
+              <button onClick={() => removeFromCart(item.id)} className="remove-button">Eliminar</button>
             </li>
           ))}
         </ul>

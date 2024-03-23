@@ -6,6 +6,7 @@ import platano from './assets/platano.png'; // Importa la primera imagen
 
 
 const cardsData = [
+  
     { 
       id: 1,
       title: 'Manzana Fuji',
@@ -55,7 +56,36 @@ const cardsData = [
       },
 
     
-    // Agrega más objetos con la información de cada elemento
   ];
+
+
+  const Verudras = [
+    { 
+      id: 1,
+      title: 'Verdura1',
+      description: 'Manzana de origen japonés, conocida por su sabor dulce y crujiente. Perfecta para comer sola o para usar en ensaladas y postres.',
+      price: 10.99,
+      image: manzana
+    },
+
+    { 
+      id: 2,
+      title: 'Verdura2',
+      description: 'Fruta de cáscara amarilla fácil de pelar, con un sabor dulce y textura cremosa. Rica en potasio y vitaminas, ideal como snack saludable.',
+      price: 12.99,
+      image: platano
+    },
+
+    { 
+        id: 3,
+        title: 'Verdura3',
+        description: ' Naranja de pulpa jugosa y sabor dulce, con un toque de acidez. Excelente fuente de vitamina C, perfecta para exprimir zumo fresco.',
+        price: 12.99,
+        image: 'https://via.placeholder.com/150'
+      },
+
+    
+  ];
+  
   
   export default cardsData;
