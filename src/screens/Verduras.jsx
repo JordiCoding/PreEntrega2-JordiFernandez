@@ -7,7 +7,7 @@ import { UserContext } from '../store/UserContext';
 import { cardsData } from '../data'; // Importa info de las cards
 
 
-function About() {
+function Verduras() {
 
   const { cartItems } = useContext(UserContext);
 
@@ -34,4 +34,4 @@ function About() {
   );
 }
 
-export default About;
+export default Verduras;

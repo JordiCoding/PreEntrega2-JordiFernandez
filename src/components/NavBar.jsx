@@ -16,7 +16,7 @@ const NavBar = ({ cartCount }) => {
            <Link to="/">Frutas</Link>
          </li>
          <li>
-           <Link to="/about">Verduras</Link>
+           <Link to="/Verduras">Verduras</Link>
          </li>
          <li>
            <Link to="/checkout">Checkout</Link>
