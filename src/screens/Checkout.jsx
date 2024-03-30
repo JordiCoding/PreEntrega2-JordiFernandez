@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import '../App.css';
+import '../components/styles.css';
 import NavBar from '../components/NavBar';
 import { UserContext } from '../store/UserContext';
 import CartPage from '../components/CartPage';
@@ -11,9 +12,9 @@ function Checkout() {
   return (
     <>
 
-        <div className="grid-container">
+        <div>
 
-        <CartPage cartItems={cartItems} /> {/* Renderiza CartPage debajo de grid-container */}
+        <CartPage cartItems={cartItems} /> 
         </div>
 
     </>

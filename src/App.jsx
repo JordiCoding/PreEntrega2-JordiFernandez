@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Checkout from './screens/Checkout';
 import Verduras from './screens/Verduras';
 import NavBar from './components/NavBar';
+import ProductDetailPage from './screens/ProductDetailPage';
 import { UserContext, UserProvider } from './store/UserContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path='/' element={<Home/>} />
               <Route path='/Verduras' element={<Verduras/>} />
               <Route path='/checkout' element={<Checkout/>} />
+              <Route path="/product/:productId" element={<ProductDetailPage />} />
             </Routes>
           </div>
         </div>

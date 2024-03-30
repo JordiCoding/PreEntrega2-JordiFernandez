@@ -201,5 +201,20 @@
       padding: 10px 0;
     }
   
-  
+
+.product-detail-container {
+  display: flex;
+}
+
+.card-detail-container {
+  flex: 1; /* Hace que el CardDetail ocupe todo el espacio disponible */
+  margin-right: 24px; /* Crea un espacio entre el CardDetail y el Checkout */
+}
+
+.checkout-container {
+  flex: 1; /* Hace que el Checkout ocupe todo el espacio disponible */
+
+}
+
+
    
